@@ -42,7 +42,7 @@ class _CryptoApiPageState extends State<CryptoApiPage> {
   // a future method that fetch data from API
   Future<void> getCryptoPrice() async{
 
-    var url = Uri.parse(yourAPI);
+    var url = Uri.parse('https://api.nomics.com/v1/currencies/ticker?key=$yourAPIKey&ids=BTC');
 
     final response = await http.get(url);
     final databody = json.decode(response.body).first;
