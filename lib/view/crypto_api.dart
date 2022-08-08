@@ -42,7 +42,7 @@ class _CryptoApiPageState extends State<CryptoApiPage> {
   // a future method that fetch data from API
   Future<void> getCryptoPrice() async{
 
-    var url = Uri.parse(apiKey);
+    var url = Uri.parse(yourAPI);
 
     final response = await http.get(url);
     final databody = json.decode(response.body).first;
